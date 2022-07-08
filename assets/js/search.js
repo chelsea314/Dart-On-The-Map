@@ -11,21 +11,29 @@
 // will be links to pages about that city.
 
 
-var possDests = {
+var possDest = {
     'one': {
         'name': 'Paris',
-        'image': 1,
+        'image': "url(1)",
     },
     'two': {
         'name': 'London',
-        'image': 2,
+        'image': "url(2)",
     },
     'three': {
         'name': 'Tokyo',
-        'image': 3,
+        'image': "url(3)",
     },
 };
 
 var destCardOne = document.getElementById(suggestion1);
 
 var destNameOne = document.createElement('h4');
+
+
+destNameOne.classList({});
+destNameOne.textContent = possDest.one.name;
+
+
+destCardOne.append(destNameOne);
+destCardOne.style.backgroundImage = "()";
