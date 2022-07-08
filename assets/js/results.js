@@ -14,14 +14,25 @@ fetch(geoSearchUrl)
     geoSearch.val("")
   })
   .then(function displayWeather(){
-    weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=877b2c2b745ff4c56b4c20032441b906`
+    weatherUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=9309cef4ed7aea83116c9db1984a5503`
     fetch(weatherUrl)
     .then(response => response.json())
   .then(data => {
-    weatherArr = [data.list[0],data.list[8],data.list[16]]
-    weatherArr.forEach(e=>{
-      console.log(`temp:${e.main.temp}\ndesc:${e.weather[0].description}`)
-    })
+    console.log(data)
+    let index = 1;
+    weatherArr = [data.daily[0],data.daily[1],data.daily[1]]
+    console.log(weatherArr)
+    
+    // $("#weatherDiv").html = ""
+    // weatherArr.forEach(e=>{
+    //   // console.log(`temp:${e.main.temp}\ndesc:${e.weather[0].description}`)
+    //   let dayDiv = $("<div>")
+    //   dayDiv.append(`temperature:${e.main.temp}`)
+    //   let iconIMG = $("<img>")
+    //   iconIMG.attr("src",`http://openweathermap.org/img/wn/${e.weather[0].icon}@2x.png`)
+    //   dayDiv.append(iconIMG)
+    //   $("#weatherDiv").append(dayDiv)
+    // })
   })
   .catch(error => console.log('error', error));
   })
