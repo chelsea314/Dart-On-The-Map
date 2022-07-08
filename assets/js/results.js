@@ -11,13 +11,22 @@ fetch(geoSearchUrl)
   .then(data => {
     lat = data[0].lat
     lon = data[0].lon
+    geoSearch.val("")
   })
-  .then(function giveResults(){
-    console.log(lat)
-    console.log(lon)
+  .then(function displayWeather(){
+    weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=877b2c2b745ff4c56b4c20032441b906`
+    fetch(weatherUrl)
+    .then(response => response.json())
+  .then(data => {
+    weatherArr = [data.list[0],data.list[8],data.list[16]]
+    weatherArr.forEach(e=>{
+      console.log(`temp:${e.main.temp}\ndesc:${e.weather[0].description}`)
+    })
   })
   .catch(error => console.log('error', error));
-  geoSearch.val("")
+  })
+  .catch(error => console.log('error', error));
+  
 
 }
 
