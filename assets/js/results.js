@@ -1,12 +1,25 @@
-let geoSearchUrl = "http://api.openweathermap.org/geo/1.0/direct?q=London&limit=1&appid=032ac5bb5a798a3a36948d8599fceafc"
+$(".is-info").on('click',searchLocation)
+
+function searchLocation(){
+  var lat;
+  let lon;
+let geoSearch = $("#resultSearch")
+
+let geoSearchUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${geoSearch.val()}&limit=1&appid=032ac5bb5a798a3a36948d8599fceafc`
 fetch(geoSearchUrl)
 .then(response => response.json())
   .then(data => {
-    console.log(data)
+    lat = data[0].lat
+    lon = data[0].lon
+  })
+  .then(function giveResults(){
+    console.log(lat)
+    console.log(lon)
   })
   .catch(error => console.log('error', error));
+  geoSearch.val("")
 
-
+}
 
 
 $('#convert-Btn').on('click',convertCurrency)
