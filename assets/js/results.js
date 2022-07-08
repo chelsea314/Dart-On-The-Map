@@ -19,20 +19,11 @@ fetch(geoSearchUrl)
     .then(response => response.json())
   .then(data => {
     console.log(data)
-    let index = 1;
-    weatherArr = [data.daily[0],data.daily[1],data.daily[1]]
-    console.log(weatherArr)
+    weatherArr = [data.daily[0],data.daily[1],data.daily[2]]
     
-    // $("#weatherDiv").html = ""
-    // weatherArr.forEach(e=>{
-    //   // console.log(`temp:${e.main.temp}\ndesc:${e.weather[0].description}`)
-    //   let dayDiv = $("<div>")
-    //   dayDiv.append(`temperature:${e.main.temp}`)
-    //   let iconIMG = $("<img>")
-    //   iconIMG.attr("src",`http://openweathermap.org/img/wn/${e.weather[0].icon}@2x.png`)
-    //   dayDiv.append(iconIMG)
-    //   $("#weatherDiv").append(dayDiv)
-    // })
+    weatherArr.forEach(e=>{
+     console.log(`Max:${e.temp.max} and Min:${e.temp.min}`)
+    })
   })
   .catch(error => console.log('error', error));
   })
