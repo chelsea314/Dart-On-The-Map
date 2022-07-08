@@ -1,6 +1,15 @@
+let geoSearchUrl = "http://api.openweathermap.org/geo/1.0/direct?q=London&limit=1&appid=032ac5bb5a798a3a36948d8599fceafc"
+fetch(geoSearchUrl)
+.then(response => response.json())
+  .then(data => {
+    console.log(data)
+  })
+  .catch(error => console.log('error', error));
+
+
+
+
 $('#convert-Btn').on('click',convertCurrency)
-
-
 
 function convertCurrency(){
   var myHeaders = new Headers();
