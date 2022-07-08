@@ -1,0 +1,62 @@
+:root {
+    --dark: #294c49;
+    --keppel: #46b5a4;
+    --gray: #7f867e;
+    --lightGreen: #acba9e;
+    --light: #f8f7f9;
+}
+
+* {
+    color: var(--light);
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Background Colors */
+.backgroundDark{
+    background-color: var(--dark);
+}
+
+.backgroundKeppel {
+    background-color: var(--keppel);
+}
+
+.backgroundGray {
+    background-color: var(--gray);
+}
+
+.backgroundLightGreen {
+    background-color: var(--lightGreen);
+}
+
+.backgroundLight {
+    background-color: var(--light);
+}
+
+/* Text Colors */
+.textDark {
+    color: var(--dark);
+}
+
+.textLight {
+    color: var(--light);
+}
+
+/* Border Colors */
+.borderGray {
+    border: solid 3px var(--gray);
+}
+
+.borderLightGreen {
+    border: solid 3px var(--lightGreen);
+}
+
+/* Top Search Section Additional Styles */
+.heroStyle {
+    border-bottom: solid 8px var(--gray);
+}
+
+
