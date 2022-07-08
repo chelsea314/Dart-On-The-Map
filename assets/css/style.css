@@ -57,6 +57,18 @@ body {
 /* Top Search Section Additional Styles */
 .heroStyle {
     border-bottom: solid 8px var(--gray);
+    min-width: 100%;
 }
 
+.backgroundImage {
+    background-image: url(../images/dartonmap.jpg);
+    background-size: cover;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    text-align: right;
+}
+
+.flexWrap {
+    flex-wrap: wrap;
+}
 
