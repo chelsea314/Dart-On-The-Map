@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 *{
     margin: 0%;
 } 
 
 
+=======
+>>>>>>> 70d368bf4a13ab78f61b48373ee5acbff98dd9b6
 :root {
     --dark: #294c49;
     --keppel: #46b5a4;
@@ -50,6 +53,13 @@ body {
     color: var(--light);
 }
 
+<<<<<<< HEAD
+=======
+.textGray {
+    color: var(--gray);
+}
+
+>>>>>>> 70d368bf4a13ab78f61b48373ee5acbff98dd9b6
 /* Border Colors */
 .borderGray {
     border: solid 3px var(--gray);
@@ -62,6 +72,7 @@ body {
 /* Top Search Section Additional Styles */
 .heroStyle {
     border-bottom: solid 8px var(--gray);
+<<<<<<< HEAD
 }
 
 /* this controls the search option*/
@@ -146,5 +157,20 @@ background-image: url(https://media.istockphoto.com/photos/cancun-beach-with-boa
 
 .Box4 {
     background-image: url(https://media.istockphoto.com/photos/christ-the-redeemer-in-rio-de-janeiro-picture-id518230906?k=20&m=518230906&s=612x612&w=0&h=YPXZ6c_pwlVFZlKafQ6HiPq-IliGgr2hAkQXExtFd64=);
+=======
+    min-width: 100%;
+}
+
+.backgroundImage {
+    background-image: url(../images/dartonmap.jpg);
+    background-size: cover;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    text-align: right;
+}
+
+.flexWrap {
+    flex-wrap: wrap;
+>>>>>>> 70d368bf4a13ab78f61b48373ee5acbff98dd9b6
 }
 
