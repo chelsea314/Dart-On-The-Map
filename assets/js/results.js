@@ -1,6 +1,6 @@
 $('#searchBtn').on('click',searchLocation)
 
-let activitesFilter 
+ 
 function searchLocation(){
   let lat;
   let lon;
@@ -14,7 +14,7 @@ function searchLocation(){
     lat = data[0].lat
     lon = data[0].lon
     displayWeather(lat,lon)
-    displayActivities("",lat,lon)
+    displayActivities("foods",lat,lon)
   })
 }
 
@@ -35,7 +35,7 @@ function displayWeather(Lat,Lon){
 function displayActivities(filter,Lat,Lon){
   let filteredArr = []
 
-  let activitiesUlr = `https://opentripmap-places-v1.p.rapidapi.com/en/places/radius?radius=500&kinds=${filter}&lon=${Lon}&lat=${Lat}`
+  let activitiesUlr = `https://opentripmap-places-v1.p.rapidapi.com/en/places/radius?radius=500&lon=${Lon}&lat=${Lat}`
   const options = {
     method: 'GET',
     headers: {
@@ -49,8 +49,24 @@ function displayActivities(filter,Lat,Lon){
   .then(data =>{
     
     data.features.forEach(e=>{
+      let xid  = e.properties.xid
+      const options1 = {
+        method: 'GET',
+        headers: {
+          'X-RapidAPI-Key': 'e4e16440e4msh33e5ed6142ae823p18048ejsn9a8190f62ac2',
+          'X-RapidAPI-Host': 'opentripmap-places-v1.p.rapidapi.com'
+        }
+      };
       
-      console.log(e.properties.kinds)
+      fetch('https://opentripmap-places-v1.p.rapidapi.com/en/places/xid/'+xid, options1)
+        .then(response => response.json())
+        .then(dataResult => {
+            // console.log(dataP.sources.attributes.length)
+            if(dataResult.sources.attributes.length > 1){
+              console.log(dataP)
+            }
+          
+        })
     })
   })
 }
