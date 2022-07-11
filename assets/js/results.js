@@ -1,48 +1,58 @@
-$(".is-info").on('click',searchLocation)
-
+$('#searchBtn').on('click',searchLocation)
 function searchLocation(){
-  var lat;
+  let lat;
   let lon;
-let geoSearch = $("#resultSearch")
 
-let geoSearchUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${geoSearch.val()}&limit=1&appid=032ac5bb5a798a3a36948d8599fceafc`
-fetch(geoSearchUrl)
-.then(response => response.json())
+  let searched = $("#resultSearch")
+  let geoSearchUrl =  `http://api.openweathermap.org/geo/1.0/direct?q=${searched.val()}&limit=1&appid=032ac5bb5a798a3a36948d8599fceafc`
+
+  fetch(geoSearchUrl)
+  .then(response => response.json())
   .then(data => {
     lat = data[0].lat
     lon = data[0].lon
-    geoSearch.val("")
+    displayWeather(lat,lon)
+    displayActivities(lat,lon)
   })
-  .then(function displayWeather(){
-    weatherUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=9309cef4ed7aea83116c9db1984a5503`
-    fetch(weatherUrl)
-    .then(response => response.json())
-  .then(data => {
-    console.log(data)
-    let index = 1;
-    weatherArr = [data.daily[0],data.daily[1],data.daily[1]]
-    console.log(weatherArr)
-    
-    // $("#weatherDiv").html = ""
-    // weatherArr.forEach(e=>{
-    //   // console.log(`temp:${e.main.temp}\ndesc:${e.weather[0].description}`)
-    //   let dayDiv = $("<div>")
-    //   dayDiv.append(`temperature:${e.main.temp}`)
-    //   let iconIMG = $("<img>")
-    //   iconIMG.attr("src",`http://openweathermap.org/img/wn/${e.weather[0].icon}@2x.png`)
-    //   dayDiv.append(iconIMG)
-    //   $("#weatherDiv").append(dayDiv)
-    // })
-  })
-  .catch(error => console.log('error', error));
-  })
-  .catch(error => console.log('error', error));
-  
-
 }
 
 
-$('#convert-Btn').on('click',convertCurrency)
+function displayWeather(Lat,Lon){
+  weatherUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${Lat}&lon=${Lon}&units=imperial&appid=9309cef4ed7aea83116c9db1984a5503`
+  fetch(weatherUrl)
+  .then(response => response.json())
+  .then(data =>{
+   let weatherArr = [data.daily[0],data.daily[1],data.daily[1]]
+   console.log(weatherArr)
+  })
+}
+
+function displayActivities(Lat,Lon){
+  let filteredArr = []
+
+  let activitiesUlr = `https://opentripmap-places-v1.p.rapidapi.com/en/places/radius?radius=500&kinds=foods&lon=${Lon}&lat=${Lat}`
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': 'e4e16440e4msh33e5ed6142ae823p18048ejsn9a8190f62ac2',
+      'X-RapidAPI-Host': 'opentripmap-places-v1.p.rapidapi.com'
+    }
+  };
+
+  fetch(activitiesUlr,options)
+  .then(response => response.json())
+  .then(data =>{
+    
+    data.features.forEach(e=>{
+      // let kinds = e.properties.kinds.split(",")
+      // console.log(kinds)
+      // if(kinds.includes("foods")){
+      //   alert("a match was found")
+      // }
+      console.log(e.properties.kinds)
+    })
+  })
+}
 
 function convertCurrency(){
   var myHeaders = new Headers();
