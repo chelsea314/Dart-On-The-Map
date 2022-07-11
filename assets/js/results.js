@@ -28,8 +28,9 @@ function displayWeather(Lat,Lon){
 }
 
 function displayActivities(Lat,Lon){
-  
-  let activitiesUlr = `https://opentripmap-places-v1.p.rapidapi.com/en/places/radius?radius=500&lon=${Lon}&lat=${Lat}`
+  let filteredArr = []
+
+  let activitiesUlr = `https://opentripmap-places-v1.p.rapidapi.com/en/places/radius?radius=500&kinds=foods&lon=${Lon}&lat=${Lat}`
   const options = {
     method: 'GET',
     headers: {
@@ -41,7 +42,15 @@ function displayActivities(Lat,Lon){
   fetch(activitiesUlr,options)
   .then(response => response.json())
   .then(data =>{
-    console.log(data)
+    
+    data.features.forEach(e=>{
+      // let kinds = e.properties.kinds.split(",")
+      // console.log(kinds)
+      // if(kinds.includes("foods")){
+      //   alert("a match was found")
+      // }
+      console.log(e.properties.kinds)
+    })
   })
 }
 
