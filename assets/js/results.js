@@ -1,4 +1,6 @@
 $('#searchBtn').on('click',searchLocation)
+
+let activitesFilter 
 function searchLocation(){
   let lat;
   let lon;
@@ -12,7 +14,7 @@ function searchLocation(){
     lat = data[0].lat
     lon = data[0].lon
     displayWeather(lat,lon)
-    displayActivities(lat,lon)
+    displayActivities("",lat,lon)
   })
 }
 
@@ -22,15 +24,18 @@ function displayWeather(Lat,Lon){
   fetch(weatherUrl)
   .then(response => response.json())
   .then(data =>{
-   let weatherArr = [data.daily[0],data.daily[1],data.daily[1]]
+   let weatherArr = [data.daily[0],data.daily[1],data.daily[2]]
    console.log(weatherArr)
+   weatherArr.forEach(e=>{
+    console.log(`max:${e.temp.max}\nmin:${e.temp.min}\n${e.weather[0].description}`)
+   })
   })
 }
 
-function displayActivities(Lat,Lon){
+function displayActivities(filter,Lat,Lon){
   let filteredArr = []
 
-  let activitiesUlr = `https://opentripmap-places-v1.p.rapidapi.com/en/places/radius?radius=500&kinds=foods&lon=${Lon}&lat=${Lat}`
+  let activitiesUlr = `https://opentripmap-places-v1.p.rapidapi.com/en/places/radius?radius=500&kinds=${filter}&lon=${Lon}&lat=${Lat}`
   const options = {
     method: 'GET',
     headers: {
@@ -44,11 +49,7 @@ function displayActivities(Lat,Lon){
   .then(data =>{
     
     data.features.forEach(e=>{
-      // let kinds = e.properties.kinds.split(",")
-      // console.log(kinds)
-      // if(kinds.includes("foods")){
-      //   alert("a match was found")
-      // }
+      
       console.log(e.properties.kinds)
     })
   })
@@ -75,3 +76,4 @@ var requestOptions = {
   .catch(error => console.log('error', error));
 
 }
+
