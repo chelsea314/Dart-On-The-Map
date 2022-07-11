@@ -106,3 +106,5 @@ destCardFour.style.backgroundImage = possDest[randomPlace].image;
 
 // Query Selector all, event target the specific card input, store it
 // in Local Storage (preferably html dataset)
+
+var recommDests = document.querySelectorAll(".suggestion");
