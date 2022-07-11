@@ -14,43 +14,43 @@
 var possDest = {
     '1' : {
         'name': 'Paris',
-        'image': "url(https://cdn.getyourguide.com/img/tour/cf879ee295abc8e4.jpeg/159.jpg)",
+        'image': "url(https://upload.travelawaits.com/ta/uploads/2021/04/eiffel-tower-800x800.jpg)",
     },
     '2' : {
         'name': 'London',
-        'image': "url(https://upload.wikimedia.org/wikipedia/commons/5/50/Wv_London_banner.jpg)",
+        'image': "url(https://www.history.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTYyNDg1MjE3MTI1Mjc5Mzk4/topic-london-gettyimages-760251843-promo.jpg)",
     },
     '3' : {
         'name': 'Hong Kong',
-        'image': "url(https://merics.org/sites/default/files/2020-04/20200121_Banner_Hongkong_Hafen_manjik%20_via123rf_81776094_m.jpg)",
+        'image': "url(https://img.static-kl.com/images/media/4EA8CE28-6BF4-4503-88618BAEF81EE29C?aspect_ratio=1:1&min_width=456)",
     },
     '4' : {
         'name': 'New York City',
-        'image': "url(https://sia.psu.edu/sites/default/files/styles/content_header/public/nyc_skyline.jpg?itok=XMbtXjcS)",
+        'image': "url(https://res.cloudinary.com/simplotel/image/upload/w_5000,h_2812/x_1094,y_0,w_2812,h_2812,r_0,c_crop,q_80,fl_progressive/w_400,f_auto,c_fit/night-hotel-broadway/Night_time_view_of_Broadway)",
     },   
     '5' : {
         'name': 'Dubai',
-        'image': "url(https://www.thetravelspecialists.net.au/wp-content/uploads/2017/04/Dubai-skyline-WEB-Banner-1920x600.jpg)",
+        'image': "url(https://pro.cosentino.com/wp-content/uploads/2020/09/Dubai.jpg)",
     },
     '6' : {
         'name': 'Sydney',
-        'image': "url(https://i0.wp.com/liftoff.network/wp-content/uploads/2019/10/Sydney-FF-banner-3.png?ssl=1)",
+        'image': "url(https://assets.airtrfx.com/media-em/cx/60f56c170a16b_dg-sydney-02-sydney-opera-house.jpg)",
     },
     '7' : {
         'name': 'Rio de Janeiro',
-        'image': "url(https://image.volunteerworld.com/6aa7b5f5f513e3c8c86dc6ef452be20b743f9870/rio-de-janeiro-banner.jpg?auto=format&crop=faces&fit=crop&h=410&w=1230)",
+        'image': "url(https://whc.unesco.org/uploads/thumbs/site_1100_0004-750-750-20120625114004.jpg)",
     },
     '8' : {
         'name': 'Cape Town',
-        'image': "url(https://adventuresafrica.com/wp-content/uploads/2019/11/Cape-Town-banner.jpg)",
+        'image': "url(https://upload.travelawaits.com/ta/uploads/2021/04/arial-view-of-cape-town-in-sobd3fe3-800x800.jpg)",
     },
     '9' : {
         'name': 'Kuala Lumpur',
-        'image': "url(2)",
+        'image': "url(https://lh3.googleusercontent.com/0pYmu6l8bh-l5hfFVWjXPICE_KbIqnEg6uysvMa4Y7aepPVYtfw7sCG7yU4-lJpe)",
     },
     '10': {
         'name': 'Buenos Aires',
-        'image': "url(2)",
+        'image': "url(https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Microcentro%2C_Buenos_Aires_%2840774240522%29.jpg/800px-Microcentro%2C_Buenos_Aires_%2840774240522%29.jpg)",
     },
 };
 
@@ -64,7 +64,41 @@ destNameOne.textContent = possDest[randomPlace].name;
 destCardOne.append(destNameOne);
 destCardOne.style.backgroundImage = possDest[randomPlace].image;
 
-places.splice(parseInt(randomPlace, 10) - 1, 1);
+places.splice(randomPlace, 1);
 console.log(places);
 
-// randomPlace = places[Math.floor(Math.random()*places.length)].toString();
+var randomPlace = places[Math.floor(Math.random()*places.length)];
+console.log(randomPlace);
+var destCardTwo = document.getElementById('suggestion2');
+var destNameTwo = document.createElement('h4');
+// destNameTwo.classList({});
+destNameTwo.textContent = possDest[randomPlace].name;
+destCardTwo.append(destNameTwo);
+destCardTwo.style.backgroundImage = possDest[randomPlace].image;
+
+places.splice(randomPlace, 1);
+console.log(places);
+
+var randomPlace = places[Math.floor(Math.random()*places.length)];
+console.log(randomPlace);
+var destCardThree = document.getElementById('suggestion3');
+var destNameThree = document.createElement('h4');
+// destNameThree.classList({});
+destNameThree.textContent = possDest[randomPlace].name;
+destCardThree.append(destNameThree);
+destCardThree.style.backgroundImage = possDest[randomPlace].image;
+
+places.splice(randomPlace, 1);
+console.log(places);
+
+var randomPlace = places[Math.floor(Math.random()*places.length)];
+console.log(randomPlace);
+var destCardFour = document.getElementById('suggestion4');
+var destNameFour = document.createElement('h4');
+// destNameFour.classList({});
+destNameFour.textContent = possDest[randomPlace].name;
+destCardFour.append(destNameFour);
+destCardFour.style.backgroundImage = possDest[randomPlace].image;
+
+places.splice(randomPlace, 1);
+console.log(places);
