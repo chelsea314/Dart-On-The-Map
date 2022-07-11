@@ -100,9 +100,9 @@ destNameFour.textContent = possDest[randomPlace].name;
 destCardFour.append(destNameFour);
 destCardFour.style.backgroundImage = possDest[randomPlace].image;
 
-places.splice(randomPlace, 1);
-console.log(places);
+// places.splice(randomPlace, 1);
+// console.log(places);
 
 
 // Query Selector all, event target the specific card input, store it
-// in Local Storage (preferably html dataset),  
+// in Local Storage (preferably html dataset)
