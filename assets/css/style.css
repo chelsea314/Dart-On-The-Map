@@ -64,6 +64,12 @@ body {
     border-bottom: solid 8px var(--gray);
 }
 
+/* Exchange Rate Tile Styling */
+.inputWidth {
+    width: 100px;
+}
+
+
 /* this controls the search option*/
 
 
@@ -118,7 +124,7 @@ body {
     
 }
 /*controls the 3 boxes for destinations*/
-.button {
+/* .button {
     width: 300%;
 }
 
@@ -127,7 +133,7 @@ body {
     padding: none;
     height: 300px;
     width: 300px;
-}
+} */
 
 
 .Box1 {
