@@ -1,6 +1,11 @@
 /* *{
     margin: 0%;
+
+    width: 100%;
+} 
+
 }  */
+
 
 
 :root {
@@ -122,32 +127,37 @@ body {
     width: 300%;
 }
 
-.tile {
-    margin: 70px;
-    padding: none;
+.suggestion {
+    display: flex; 
+   
+    margin: 1%;
     height: 300px;
-    width: 300px;
+    font-size:  large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+    
 }
 
 
-.Box1 {
-background-image: url(https://media.istockphoto.com/photos/cancun-beach-with-boat-picture-id956105474?k=20&m=956105474&s=612x612&w=0&h=uDy8jRa5XrEbKBKCm_6tCIeecai4prURWIWYEJOuSSk=);
+#suggestion1 {
+     background-size: 100% 100%;
 
+ }
 
+#suggestion2 {
+        background-size: 100% 100%;
 }
 
-.Box2 {
-    background-image: url(https://media.istockphoto.com/photos/the-main-attraction-of-paris-and-all-of-europe-is-the-eiffel-tower-in-picture-id1185953092?k=20&m=1185953092&s=612x612&w=0&h=KHs_E9GYlaacGx9lzvYwID7mopBmw7nN4jyr7b-Acqo=);
+#suggestion3 {
+    
+    background-size: 100% 100%;
 }
 
-.Box3 {
-    background-image: url(https://media.istockphoto.com/photos/aerial-panorama-of-botafogo-bay-rio-de-janeiro-picture-id608540602?k=20&m=608540602&s=612x612&w=0&h=H5Wot6ro7cW-uRhQejFgpNAVOS8IKQu9mumoMvsMNag=);
+#suggestion4 {
+    
+    background-size: 100% 100%;
 }
 
-.Box4 {
-    background-image: url(https://media.istockphoto.com/photos/christ-the-redeemer-in-rio-de-janeiro-picture-id518230906?k=20&m=518230906&s=612x612&w=0&h=YPXZ6c_pwlVFZlKafQ6HiPq-IliGgr2hAkQXExtFd64=);
-    min-width: 100%;
-}
 
 .backgroundCover {
     background-size: cover;
@@ -156,7 +166,12 @@ background-image: url(https://media.istockphoto.com/photos/cancun-beach-with-boa
    
 }
 
-.flexWrap {
-    flex-wrap: wrap;
-}
 
+.footer {
+    width: 100%;
+    bottom: 0%;
+    margin: auto;
+    position: fixed;
+
+        
+}
