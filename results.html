@@ -110,33 +110,38 @@
 
 
              <!-- Currency Dropdown Menu -->
-             <select name="from" class="currency textDark borderGray" id="from">
-              <option class="textDark" value="USD">USD</option>
-              <option class="textDark" value="EUR">Euro</option>
-              <option class="textDark" value="MXN">MX Peso</option>
-              <option class="textDark" value="AUD">AUD</option>
-            </select>
+             <div class="tile is-child">
+              <select name="from" class="currency textDark borderGray" id="from">
+                <option class="textDark" value="USD">USD</option>
+                <option class="textDark" value="EUR">Euro</option>
+                <option class="textDark" value="MXN">MX Peso</option>
+                <option class="textDark" value="AUD">AUD</option>
+              </select>
+            </div>
 
-            <br>
 
             <!-- Currency Amount Input -->
             <input class="input inputWidth textDark borderGray" value="1" type="number" id="amount" placeholder="1">
                         
-            <br>
+            
 
             <!-- Currency Dropdown Menu -->
-            <select name="to" class="currency textDark borderGray" id="from">
-              <option class="textDark" value="USD">USD</option>
-              <option class="textDark" value="EUR">Euro</option>
-              <option class="textDark" value="MXN">MX Peso</option>
-              <option class="textDark" value="AUD">AUD</option>
-            </select>
+            <div class=>
+              <select name="to" class="currency textDark borderGray" id="from">
+                <option class="textDark" value="USD">USD</option>
+                <option class="textDark" value="EUR">Euro</option>
+                <option class="textDark" value="MXN">MX Peso</option>
+                <option class="textDark" value="AUD">AUD</option>
+              </select>
+            </div>
 
-            <br>
-
-            <span id="converted" class="textLight"></span> 
             
-            <br>
+            
+            <div class="backgroundLight">
+            <p id="converted" class="textDark" placeholder="Rate"></p> 
+            </div>
+            
+           
             
             <button class="textLight borderLightGreen backgroundDark" id="convert-Btn">Convert</button>
 
@@ -158,13 +163,11 @@
       </div>
     </div>
 
-    <footer class="footer backgroundDark">
-      <div class="content has-text-centered">
-        <p>
-          <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-          is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-        </p>
+    <footer class="footer columns backgroundDark">
+      <div class="content backgroundCover has-text-centered">
+        <figure class="backgroundCover">
+          <img src="./assets/images/dartonmap.jpg" alt="Dart on a Map">
+        </figure>
       </div>
     </footer>
 
