@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+*{
+    margin: 0%;
+} 
+
+
+=======
+>>>>>>> 70d368bf4a13ab78f61b48373ee5acbff98dd9b6
 :root {
     --dark: #294c49;
     --keppel: #46b5a4;
@@ -45,10 +53,13 @@ body {
     color: var(--light);
 }
 
+<<<<<<< HEAD
+=======
 .textGray {
     color: var(--gray);
 }
 
+>>>>>>> 70d368bf4a13ab78f61b48373ee5acbff98dd9b6
 /* Border Colors */
 .borderGray {
     border: solid 3px var(--gray);
@@ -61,6 +72,92 @@ body {
 /* Top Search Section Additional Styles */
 .heroStyle {
     border-bottom: solid 8px var(--gray);
+<<<<<<< HEAD
+}
+
+/* this controls the search option*/
+
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border:  2px solid #00B4CC;
+    border-right: none;
+    padding: 16px;
+    height: 30px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color: #00B4CC;
+  }
+  
+  .searchButton {
+    width: 50px;
+    height: 36px;
+    border: 1px solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /*Resize the wrap to see the search bar change!*/
+  .wrap{
+    width: 30%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+  }
+/*/
+  .dropdown {
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    
+}
+/*controls the 3 boxes for destinations*//
+.button {
+    width: 300%;
+}
+
+.tile {
+    margin: 70px;
+    padding: none;
+    height: 300px;
+    width: 300px;
+}
+
+
+.Box1 {
+background-image: url(https://media.istockphoto.com/photos/cancun-beach-with-boat-picture-id956105474?k=20&m=956105474&s=612x612&w=0&h=uDy8jRa5XrEbKBKCm_6tCIeecai4prURWIWYEJOuSSk=);
+
+
+}
+
+.Box2 {
+    background-image: url(https://media.istockphoto.com/photos/the-main-attraction-of-paris-and-all-of-europe-is-the-eiffel-tower-in-picture-id1185953092?k=20&m=1185953092&s=612x612&w=0&h=KHs_E9GYlaacGx9lzvYwID7mopBmw7nN4jyr7b-Acqo=);
+}
+
+.Box3 {
+    background-image: url(https://media.istockphoto.com/photos/aerial-panorama-of-botafogo-bay-rio-de-janeiro-picture-id608540602?k=20&m=608540602&s=612x612&w=0&h=H5Wot6ro7cW-uRhQejFgpNAVOS8IKQu9mumoMvsMNag=);
+}
+
+.Box4 {
+    background-image: url(https://media.istockphoto.com/photos/christ-the-redeemer-in-rio-de-janeiro-picture-id518230906?k=20&m=518230906&s=612x612&w=0&h=YPXZ6c_pwlVFZlKafQ6HiPq-IliGgr2hAkQXExtFd64=);
+=======
     min-width: 100%;
 }
 
@@ -74,5 +171,6 @@ body {
 
 .flexWrap {
     flex-wrap: wrap;
+>>>>>>> 70d368bf4a13ab78f61b48373ee5acbff98dd9b6
 }
 
