@@ -45,6 +45,10 @@ body {
     color: var(--light);
 }
 
+.textGray {
+    color: var(--gray);
+}
+
 /* Border Colors */
 .borderGray {
     border: solid 3px var(--gray);
