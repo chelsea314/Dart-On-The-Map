@@ -1,39 +1,49 @@
-$(".is-info").on('click',searchLocation)
-
+$('#searchBtn').on('click',searchLocation)
 function searchLocation(){
-  var lat;
+  let lat;
   let lon;
-let geoSearch = $("#resultSearch")
 
-let geoSearchUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${geoSearch.val()}&limit=1&appid=032ac5bb5a798a3a36948d8599fceafc`
-fetch(geoSearchUrl)
-.then(response => response.json())
+  let searched = $("#resultSearch")
+  let geoSearchUrl =  `http://api.openweathermap.org/geo/1.0/direct?q=${searched.val()}&limit=1&appid=032ac5bb5a798a3a36948d8599fceafc`
+
+  fetch(geoSearchUrl)
+  .then(response => response.json())
   .then(data => {
     lat = data[0].lat
     lon = data[0].lon
-    geoSearch.val("")
+    displayWeather(lat,lon)
+    displayActivities(lat,lon)
   })
-  .then(function displayWeather(){
-    weatherUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=9309cef4ed7aea83116c9db1984a5503`
-    fetch(weatherUrl)
-    .then(response => response.json())
-  .then(data => {
-    console.log(data)
-    weatherArr = [data.daily[0],data.daily[1],data.daily[2]]
-    
-    weatherArr.forEach(e=>{
-     console.log(`Max:${e.temp.max} and Min:${e.temp.min}`)
-    })
-  })
-  .catch(error => console.log('error', error));
-  })
-  .catch(error => console.log('error', error));
-  
-
 }
 
 
-$('#convert-Btn').on('click',convertCurrency)
+function displayWeather(Lat,Lon){
+  weatherUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${Lat}&lon=${Lon}&units=imperial&appid=9309cef4ed7aea83116c9db1984a5503`
+  fetch(weatherUrl)
+  .then(response => response.json())
+  .then(data =>{
+   let weatherArr = [data.daily[0],data.daily[1],data.daily[1]]
+   console.log(weatherArr)
+  })
+}
+
+function displayActivities(Lat,Lon){
+  
+  let activitiesUlr = `https://opentripmap-places-v1.p.rapidapi.com/en/places/radius?radius=500&lon=${Lon}&lat=${Lat}`
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': 'e4e16440e4msh33e5ed6142ae823p18048ejsn9a8190f62ac2',
+      'X-RapidAPI-Host': 'opentripmap-places-v1.p.rapidapi.com'
+    }
+  };
+
+  fetch(activitiesUlr,options)
+  .then(response => response.json())
+  .then(data =>{
+    console.log(data)
+  })
+}
 
 function convertCurrency(){
   var myHeaders = new Headers();
