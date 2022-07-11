@@ -1,6 +1,6 @@
-*{
+/* *{
     margin: 0%;
-} 
+}  */
 
 
 :root {
@@ -149,12 +149,11 @@ background-image: url(https://media.istockphoto.com/photos/cancun-beach-with-boa
     min-width: 100%;
 }
 
-.backgroundImage {
-    background-image: url(../images/dartonmap.jpg);
+.backgroundCover {
     background-size: cover;
-    background-position-y: center;
-    background-repeat: no-repeat;
-    text-align: right;
+    /* background-position-y: center; */
+    /* background-repeat: no-repeat; */
+   
 }
 
 .flexWrap {
