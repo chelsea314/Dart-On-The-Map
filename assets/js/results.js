@@ -38,7 +38,9 @@ function displayWeather(Lat,Lon){
     let descDiv = $("<div>")
     let icon = $("<img>")
     icon.attr("src",`http://openweathermap.org/img/wn/${iconcode}@2x.png`)
-    descDiv.append(icon,e.weather[0].description)
+    let desctription = $('<p>')
+    desctription.text(e.weather[0].description)
+    descDiv.append(desctription,icon)
 
     
 
