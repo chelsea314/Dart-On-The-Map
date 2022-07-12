@@ -131,7 +131,13 @@ body {
 }
 /*controls the 3 boxes for destinations*/
 
-
+.suggestionHolder {
+    height: 400px;
+    width: 500px;
+    display: block;
+    margin: auto;
+    
+}
 
 
 .suggestion {
@@ -144,6 +150,8 @@ body {
     
 }
 
+
+.cardStyle 
 
 #suggestion1 {
    background-size: 100% 100%;
@@ -166,12 +174,6 @@ body {
     height: 500px;  
  }
 
-
-.backgroundCover {
-    background-size: cover;
-    /* background-position-y: center; */
-    /* background-repeat: no-repeat; */
-}
 
 
 .footerSearch {

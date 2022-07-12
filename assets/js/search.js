@@ -10,6 +10,16 @@
 // a database of potential destinations that someone can go to right away, and each of these cards
 // will be links to pages about that city.
 
+var resultsPage = './results.html';
+
+var searchGo = document.querySelector('.searchButton');
+searchGo.addEventListener('click', function() {
+    var searchInput = document.querySelector('.searchTerm').value;
+    console.log(searchInput);
+    localStorage.setItem('localSearch', searchInput);
+    document.location.replace(resultsPage);
+})
+
 
 var possDest = {
     '0': {
@@ -59,7 +69,7 @@ var randomIndex = Math.floor(Math.random()*places.length);
 var randomPlace = places[randomIndex];
 console.log(randomPlace);
 var destCardOne = document.getElementById('suggestion1');
-var destNameOne = document.createElement('h4');
+var destNameOne = document.createElement('h3');
 // destNameOne.classList({});
 destNameOne.textContent = possDest[randomPlace].name;
 destCardOne.append(destNameOne);
@@ -72,7 +82,7 @@ randomIndex = Math.floor(Math.random()*places.length);
 randomPlace = places[randomIndex];
 console.log(randomPlace);
 var destCardTwo = document.getElementById('suggestion2');
-var destNameTwo = document.createElement('h4');
+var destNameTwo = document.createElement('h3');
 // destNameTwo.classList({});
 destNameTwo.textContent = possDest[randomPlace].name;
 destCardTwo.append(destNameTwo);
@@ -85,7 +95,7 @@ randomIndex = Math.floor(Math.random()*places.length);
 randomPlace = places[randomIndex];
 console.log(randomPlace);
 var destCardThree = document.getElementById('suggestion3');
-var destNameThree = document.createElement('h4');
+var destNameThree = document.createElement('h3');
 // destNameThree.classList({});
 destNameThree.textContent = possDest[randomPlace].name;
 destCardThree.append(destNameThree);
@@ -98,17 +108,30 @@ randomIndex = Math.floor(Math.random()*places.length);
 randomPlace = places[randomIndex];
 console.log(randomPlace);
 var destCardFour = document.getElementById('suggestion4');
-var destNameFour = document.createElement('h4');
-// destNameFour.classList({});
+destCardFour.style.position = 'relative';
+var destNameFour = document.createElement('h3');
+destNameFour.style.padding = '5px';
+destNameFour.style.backgroundColor = '#294c49';
+destNameFour.style.color = 'var(--light)';
+destNameFour.style.textAlign = 'center';
+destNameFour.style.fontSize = '300%';
+destNameFour.style.position = 'absolute';
+destNameFour.style.bottom = '0px';
 destNameFour.textContent = possDest[randomPlace].name;
 destCardFour.append(destNameFour);
 destCardFour.style.backgroundImage = possDest[randomPlace].image;
-
-// places.splice(randomPlace, 1);
-// console.log(places);
-
 
 // Query Selector all, event target the specific card input, store it
 // in Local Storage (preferably html dataset)
 
 var recommDests = document.querySelectorAll(".suggestion");
+recommDests.forEach(suggestion => {
+    suggestion.addEventListener('click', function(event) {
+        console.log('Card clicked', event);
+        var dest = event.target.firstElementChild.innerText;
+        localStorage.setItem('localSearch', dest);
+        document.location.replace(resultsPage);
+    })
+})
+
+
