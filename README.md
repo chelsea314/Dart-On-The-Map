@@ -32,7 +32,8 @@ The mobile page wireframe was developed further to include brand colors and a cl
 <br>
 
 # Overview
-insert screenshots
+
+![Search Page](./assets/images/SearchScreenshot.jpg)
 
 <br>
 
@@ -52,7 +53,13 @@ insert screenshots
 # Resources
 * [Bulma](https://bulma.io/documentation/)
 * [jQuery](https://api.jquery.com/)
-*
+* [Iconify](https://iconify.design/)
+* [Font Awesome](https://fontawesome.com/icons)
+* [Open Weather API](https://openweathermap.org/api)
+* [Open Trip Map API](https://opentripmap.io/product)
+* [Exchange Rates Data API](https://apilayer.com/marketplace/exchangerates_data-api)
+
+
 
 <br>
 
