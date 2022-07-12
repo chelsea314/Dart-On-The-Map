@@ -132,48 +132,52 @@ body {
 /*controls the 4 boxes for destinations*/
 
 
-
 .suggestion {
     display: flex;
     flex-wrap: wrap;
     block-size: auto;    
-   justify-content: space-evenly;
+    justify-content: space-evenly;
     
     
 }
-   
+.nameStyle {
+    padding: 5px;
+    background-color: var(--dark);
+    color: var(--light);
+    text-align: center;
+    font-size: 300%;
+    position: absolute;
+    bottom: 0px;
+}
+
   #suggestion1 {
-   background-size: 100% 100%;
-   height: 500px;   
-   width: 500px;
-   
-   
- }
+    background-size: 100% 100%;
+    height: 500px;   
+    width: 500px;
+    position: relative;
+}
 
  #suggestion2 {
     background-size: 100% 100%;
     height: 500px;
     width: 500px;  
+    position: relative;
  }
 
  #suggestion3 {
     background-size: 100% 100%;
     height: 500px;  
     width: 500px;
+    position: relative;
  }
 
  #suggestion4 {
     background-size: 100% 100%;
     height: 500px; 
     width: 500px; 
+    position: relative;
  }
 
-
-.backgroundCover {
-    background-size: cover;
-    /* background-position-y: center; */
-    /* background-repeat: no-repeat; */
-}
 
 
 .footerSearch {
