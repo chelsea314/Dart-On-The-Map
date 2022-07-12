@@ -14,7 +14,7 @@ function searchLocation(){
     lat = data[0].lat
     lon = data[0].lon
     displayWeather(lat,lon)
-    displayActivities("foods",lat,lon)
+    searchActivities("foods",lat,lon)
   })
 }
 
@@ -32,14 +32,13 @@ function displayWeather(Lat,Lon){
   })
 }
 
-function displayActivities(filter,Lat,Lon){
-  let filteredArr = []
+function searchActivities(filter,Lat,Lon){
 
-  let activitiesUlr = `https://opentripmap-places-v1.p.rapidapi.com/en/places/radius?radius=500&lon=${Lon}&lat=${Lat}`
+  let activitiesUlr = `https://opentripmap-places-v1.p.rapidapi.com/en/places/radius?radius=16093.4&limit=50&lon=${Lon}&lat=${Lat}`
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': 'e4e16440e4msh33e5ed6142ae823p18048ejsn9a8190f62ac2',
+      'X-RapidAPI-Key': '50bbf92f8cmsh3f683fecdd8114dp171169jsn8652d923bcec',
       'X-RapidAPI-Host': 'opentripmap-places-v1.p.rapidapi.com'
     }
   };
@@ -47,26 +46,43 @@ function displayActivities(filter,Lat,Lon){
   fetch(activitiesUlr,options)
   .then(response => response.json())
   .then(data =>{
-    
+    console.log(data)
+    $("#resultsContainer").html("")
     data.features.forEach(e=>{
       let xid  = e.properties.xid
       const options1 = {
         method: 'GET',
         headers: {
-          'X-RapidAPI-Key': 'e4e16440e4msh33e5ed6142ae823p18048ejsn9a8190f62ac2',
+          'X-RapidAPI-Key': '50bbf92f8cmsh3f683fecdd8114dp171169jsn8652d923bcec',
           'X-RapidAPI-Host': 'opentripmap-places-v1.p.rapidapi.com'
         }
       };
-      
+      var index = 0;
       fetch('https://opentripmap-places-v1.p.rapidapi.com/en/places/xid/'+xid, options1)
         .then(response => response.json())
         .then(dataResult => {
-            // console.log(dataP.sources.attributes.length)
-            if(dataResult.sources.attributes.length > 1){
-              console.log(dataP)
+            if(dataResult.sources.attributes.length > 1 && index <5){
+              let container = $("<article>")
+              container.addClass("tile is-child notification borderGray backgroundKeppel")
+              let title = $("<p>")
+              title.addClass("title")
+              title.text(dataResult.name)
+              
+              let description =  $("<p>")
+              description.addClass("subtitle")
+              description.text(dataResult.wikipedia_extracts.text)
+
+              let linktag = $("<p>")
+              linktag.html(`<a herf=${dataResult.otm}>read more here</a>`)
+              // container.innerhtml = `<p class="title">${data.name}</p><p class="subtitle">${data.wikipedia_extracts.html}</p><p><a herf=${data.otm}>read more here</a></p>`
+              container.append(title,description,linktag)
+              $("#resultsContainer").append(container)
+              // console.log(index)
+              index = 5;
             }
           
         })
+        .then("console")
     })
   })
 }
