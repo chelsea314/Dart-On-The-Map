@@ -131,14 +131,40 @@ body {
 }
 /*controls the 3 boxes for destinations*/
 
+
+
+
+.suggestion {
+    height: 400px;
+    width: 500px;
+    display: block;
+    margin: auto;
+    
+       
+    
+}
+
+
 #suggestion1 {
    background-size: 100% 100%;
-   height: 500px;  
-    
+   height: 500px;    
 
  }
 
+ #suggestion2 {
+    background-size: 100% 100%;
+    height: 500px;  
+ }
 
+ #suggestion3 {
+    background-size: 100% 100%;
+    height: 500px;  
+ }
+
+ #suggestion4 {
+    background-size: 100% 100%;
+    height: 500px;  
+ }
 
 
 .backgroundCover {
