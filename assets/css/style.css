@@ -129,41 +129,43 @@ body {
     left: 35%;
     
 }
-/*controls the 3 boxes for destinations*/
-
+/*controls the 4 boxes for destinations*/
 
 
 
 .suggestion {
-    height: 400px;
-    width: 500px;
-    display: block;
-    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    block-size: auto;    
+   justify-content: space-evenly;
     
-       
     
 }
-
-
-#suggestion1 {
+   
+  #suggestion1 {
    background-size: 100% 100%;
-   height: 500px;    
-
+   height: 500px;   
+   width: 500px;
+   
+   
  }
 
  #suggestion2 {
     background-size: 100% 100%;
-    height: 500px;  
+    height: 500px;
+    width: 500px;  
  }
 
  #suggestion3 {
     background-size: 100% 100%;
     height: 500px;  
+    width: 500px;
  }
 
  #suggestion4 {
     background-size: 100% 100%;
-    height: 500px;  
+    height: 500px; 
+    width: 500px; 
  }
 
 
@@ -181,6 +183,17 @@ body {
     bottom: 0%;
     margin: auto;
     position: fixed;        
-}
+}                 
+    
+@media screen and (max-width: 768px) {
+    .suggestion{
+        
+       float:left;
+      }
+} 
+
+
+
+
 
 
