@@ -131,13 +131,6 @@ body {
 }
 /*controls the 3 boxes for destinations*/
 
-.suggestionHolder {
-    height: 400px;
-    width: 500px;
-    display: block;
-    margin: auto;
-    
-}
 
 
 .suggestion {
@@ -145,33 +138,41 @@ body {
     width: 500px;
     display: block;
     margin: auto;
-    
-       
-    
 }
 
 
-.cardStyle 
+.nameStyle {
+    padding: 5px;
+    background-color: var(--dark);
+    color: var(--light);
+    text-align: center;
+    font-size: 300%;
+    position: absolute;
+    bottom: 0px;
+}
 
 #suggestion1 {
    background-size: 100% 100%;
-   height: 500px;    
-
+   height: 500px;
+   position: relative;
  }
 
  #suggestion2 {
     background-size: 100% 100%;
-    height: 500px;  
+    height: 500px;
+    position: relative;
  }
 
  #suggestion3 {
     background-size: 100% 100%;
-    height: 500px;  
+    height: 500px;
+    position: relative;
  }
 
  #suggestion4 {
     background-size: 100% 100%;
-    height: 500px;  
+    height: 500px;
+    position: relative;
  }
 
 
