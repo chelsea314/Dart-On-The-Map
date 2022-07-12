@@ -130,41 +130,15 @@ body {
     
 }
 /*controls the 3 boxes for destinations*/
-/* .button {
-    width: 300%;
-}
-
-.suggestion {
-    display: flex; 
-   
-    margin: 1%;
-    height: 300px;
-    width: 300px;
-} 
-*/
-/* * {}
-    font-size:  large;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
- */
 
 #suggestion1 {
-     background-size: 100% 100%;
+   background-size: 100% 100%;
+   height: 500px;  
+    
 
  }
 
-#suggestion2 {
-        background-size: 100% 100%;
-}
 
-#suggestion3 {
-    
-    background-size: 100% 100%;
-}
-
-#suggestion4 {
-    
-    background-size: 100% 100%;
-}
 
 
 .backgroundCover {
@@ -174,7 +148,9 @@ body {
 }
 
 
-.footer {
+.footerSearch {
+    background-color: #294c49;
+    height: 100px;
     width: 100%;
     bottom: 0%;
     margin: auto;
