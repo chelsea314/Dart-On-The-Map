@@ -151,6 +151,14 @@ body {
     bottom: 0px;
 }
 
+.suggestion6 {
+    margin-top: 5%;
+    margin-bottom: 16%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+            
+}
 
 #suggestion1 {
     background-size: 100% 100%;
@@ -185,7 +193,7 @@ body {
     height: 100px;
     width: 100%;
     bottom: 0%;
-    margin: auto;
+   
     position: fixed;        
 }  
     
