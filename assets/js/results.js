@@ -27,17 +27,22 @@ function displayWeather(Lat,Lon){
    let weatherArr = [data.daily[0],data.daily[1],data.daily[2]]
    console.log(weatherArr)
    weatherArr.forEach(e=>{
+    let date = new Date(e.dt*1000)
+    let dateText = `${date.getMonth()}/${date.getDate()}`
+    console.log(date)
+    let iconcode = e.weather[0].icon
+
     let container = $("<div>")
     let temps = $("<div>")
-    temps.html("<h1>max:ex min:ex</h1>")
+    temps.html(`<h1>max:${e.temp.max} min:${e.temp.min}</h1>`)
     let descDiv = $("<div>")
     let icon = $("<img>")
-    icon.attr("src","url(http://openweathermap.org/img/wn/10d@2x.png)")
-    descDiv.append(icon,"description")
+    icon.attr("src",`http://openweathermap.org/img/wn/${iconcode}@2x.png`)
+    descDiv.append(icon,e.weather[0].description)
 
     
 
-    container.append(temps,descDiv)
+    container.append(dateText,temps,descDiv)
     $('#weatherResults').append(container)
     console.log(`max:${e.temp.max}\nmin:${e.temp.min}\n${e.weather[0].description}`)
    })
