@@ -1,28 +1,16 @@
 # Dart on the Map
-
-# Welcome!
 Welcome to Dart on the Map! 
 
-This application is inspired by the idea of throwing a dart on a map and traveling to the place it strikes. We support spontaneity and hope to bring this idea to fruition through our site. Plan your upcoming travel whether destination known or unknown. With Dart on the Map, let your spontaneous side shine and let the dart decide. 
-
-Where will you go next?
-
-Give a new place a try.
-
-Discover a new culture.
-
-Try a new food. 
-
-Enjoy a different view.  
-
-And…
-
-Let chance decide.
+This application is inspired by the desire to throw a dart on a map and travel to the place it strikes. We support spontaneity and hope to bring this idea to fruition through our site. Plan your upcoming travel, whether destination known or unknown, with Dart on the Map. Let your spontaneous side shine and let the dart decide. 
 
 It may seem scary, but we are firm believers that, 'taking the road less traveled can make all the difference.' At Dart on the Map, take the scary out of spontaneous travel and recieve help planning your trip. 
 
+Where will you go next?
+
+<br>
+
 # Wireframe
-As a team, a first draft of the search page was first developed:
+As a team, a first draft of the search page was developed:
 ![Wireframe - Search Page - 1st Draft](./assets/images/Superior%20Group%20Wireframe%20-%20Search%20Page%20-%201st%20Draft.png)
 
 The search page wireframe was developed further to include brand colors and a clearer vision for all developers to utilize: 
@@ -31,7 +19,7 @@ The search page wireframe was developed further to include brand colors and a cl
 A first draft of the resutls page was developed: 
 ![Wireframe - Results Page - 1st Draft](./assets/images/Superior%20Group%20Wireframe%20-%20Results%20Page%20-%201st%20Draft.png)
 
-The results page wireframe was developed further to include brand colors and a clearer vision for all developers to utilize:
+The results page wireframe was developed further to include brand colors, id's and a clearer vision for all developers to utilize:
 ![Wireframe - Results Page - Final](./assets/images/Superior%20Group%20Wireframe%20-%20Results%20Page.png)
 
 First draft of mobile view: 
@@ -41,13 +29,17 @@ The mobile page wireframe was developed further to include brand colors and a cl
 ![Wireframe - Mobile - Final](./assets/images/Superior%20Group%20Wireframe%20Mobile.png)
 
 
+<br>
 
 # Overview
 insert screenshots
 
+<br>
 
 # Deployed Website Link
 [Dart on the Map]() 
+
+<br>
 
 # Collaborators 
 * [Angel Meza](https://github.com/amezabla)
@@ -55,9 +47,14 @@ insert screenshots
 * [Zach Serrano](https://github.com/ZSerrano)
 * [Chelsea Sexton](https://github.com/chelsea314)
 
+<br>
+
 # Resources
 * [Bulma](https://bulma.io/documentation/)
+* [jQuery](https://api.jquery.com/)
+*
 
+<br>
 
 # License
 MIT License
