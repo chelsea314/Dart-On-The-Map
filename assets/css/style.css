@@ -1,13 +1,3 @@
-/* *{
-    margin: 0%;
-
-    width: 100%;
-} 
-
-}  */
-
-
-
 :root {
     --dark: #294c49;
     --keppel: #46b5a4;
@@ -56,12 +46,16 @@ body {
 }
 
 /* Border Colors */
+.borderDark {
+    border: solid 2px var(--dark)
+}
+
 .borderGray {
-    border: solid 3px var(--gray);
+    border: solid 2px var(--gray);
 }
 
 .borderLightGreen {
-    border: solid 3px var(--lightGreen);
+    border: solid 2px var(--lightGreen);
 }
 
 /* Top Search Section Additional Styles */
@@ -69,15 +63,22 @@ body {
     border-bottom: solid 8px var(--gray);
 }
 
+.flexWrap {
+    flex-wrap: wrap;
+}
+
 /* Exchange Rate Tile Styling */
 .inputWidth {
     width: 100px;
 }
 
+/* Footer Styles */
+.footerBorder {
+    border-top: solid 8px var(--gray);
+}
+
 
 /* this controls the search option*/
-
-
 .search {
     width: 100%;
     position: relative;
@@ -141,11 +142,10 @@ body {
     width: 300px;
 } 
 */
-* {}
+/* * {}
     font-size:  large;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
+ */
 
 #suggestion1 {
      background-size: 100% 100%;
@@ -171,7 +171,6 @@ body {
     background-size: cover;
     /* background-position-y: center; */
     /* background-repeat: no-repeat; */
-   
 }
 
 
@@ -179,7 +178,7 @@ body {
     width: 100%;
     bottom: 0%;
     margin: auto;
-    position: fixed;
-
-        
+    position: fixed;        
 }
+
+
