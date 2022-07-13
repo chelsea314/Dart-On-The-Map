@@ -7,7 +7,7 @@ function searchLocation(e){
   let lat;
   let lon;
   console.log(e)
-  let geoSearchUrl =  `http://api.openweathermap.org/geo/1.0/direct?q=${e}&limit=1&appid=032ac5bb5a798a3a36948d8599fceafc`
+  let geoSearchUrl =  `https://api.openweathermap.org/geo/1.0/direct?q=${e}&limit=1&appid=032ac5bb5a798a3a36948d8599fceafc`
 
   fetch(geoSearchUrl)
   .then(response => response.json())
@@ -56,7 +56,7 @@ function searchActivities(filter,Lat,Lon){
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '50bbf92f8cmsh3f683fecdd8114dp171169jsn8652d923bcec',
+      'X-RapidAPI-Key':'e4e16440e4msh33e5ed6142ae823p18048ejsn9a8190f62ac2',
       'X-RapidAPI-Host': 'opentripmap-places-v1.p.rapidapi.com'
     }
   };
@@ -70,7 +70,7 @@ function searchActivities(filter,Lat,Lon){
       const options1 = {
         method: 'GET',
         headers: {
-          'X-RapidAPI-Key': '50bbf92f8cmsh3f683fecdd8114dp171169jsn8652d923bcec',
+          'X-RapidAPI-Key': 'e4e16440e4msh33e5ed6142ae823p18048ejsn9a8190f62ac2',
           'X-RapidAPI-Host': 'opentripmap-places-v1.p.rapidapi.com'
         }
       };
