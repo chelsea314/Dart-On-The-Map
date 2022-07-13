@@ -35,24 +35,27 @@
 
         <!-- Navigation -->
           <div class="column field title is-6 is-grouped is-align-items-center navigation flexWrap is-justify-content-space-evenly	">
-            <p class="control m-1">
-              <a class="button backgroundKeppel borderLightGreen">
-                <span>Flights</span>
-              </a>
-            </p>
-            <p class="control m-1">
+            
+            <p data-filters="other_hotels,campsites,motels,hostels" class="filters control m-1">
               <a class="button backgroundKeppel borderLightGreen">
                 <span>Accommodations</span>
               </a>
             </p>
-            <p class="control m-1">
+            <p data-filters="interesting_places" class="filters control m-1">
               <a class="button backgroundKeppel borderLightGreen">
-                <span>Activities</span>
+
+                <span>Interesting Places</span>
+
               </a>
             </p>
-            <p class="control m-1">
+            <p data-filters="amusements" class="filters control m-1">
               <a class="button backgroundKeppel borderLightGreen">
-                <span>Restaurants</span>
+                <span>Amusements</span>
+              </a>
+            </p>
+            <p data-filters="foods" class="filters control m-1">
+              <a class="button backgroundKeppel borderLightGreen">
+                <span>Food</span>
               </a>
             </p>
           </div>
@@ -65,10 +68,7 @@
 
           <div  id="resultsContainer" class="tile is-vertical is-parent">
             <article class="tile is-child notification borderGray backgroundKeppel">
-              <!-- <p class="title">Activity</p>
-              <p class="subtitle">Visit me!</p>
-              <div class="content">
-              </div> -->
+              
             </article>
 
           </div>
@@ -137,8 +137,8 @@
         
       </div>
     </footer>
-
-
+    
+    
   
 <!-- jQuery Script -->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
