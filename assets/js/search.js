@@ -1,17 +1,8 @@
-// Pseudocode
+// Search Page
 
-// HTML and Bulma docs will handle layout arrangements across the page
-
-// Upon loading of page, Search Bar should be populated with placeholder text, 
-// dropdown menu should have some form of placeholder text stating what it will list, and 
-// 'Search' button should appear below both.
-
-// Below the 'Search' container, four cards will appear that contain information randomized from 
-// a database of potential destinations that someone can go to right away, and each of these cards
-// will be links to pages about that city.
-
+// Variable that directs to the Results Page
 var resultsPage = './results.html';
-
+// Upon clicking the Search Button, the name of the City that has been input is saved to Local Storage and the user is directed to the Results Page
 var searchGo = document.querySelector('.searchButton');
 searchGo.addEventListener('click', function() {
     var searchInput = document.querySelector('.searchTerm').value;
@@ -20,7 +11,7 @@ searchGo.addEventListener('click', function() {
     document.location.replace(resultsPage);
 })
 
-
+// Object containing popular tourist destinations across the globe along with general images of each
 var possDest = {
     '0': {
         'name': 'Paris',
@@ -64,6 +55,8 @@ var possDest = {
     },
 };
 
+// Series of methods used to randomly populate each card on the initial Search Page with values from the objects above,
+// along with splice methods utilized to ensure no cards share the same city.
 var places = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
 var randomIndex = Math.floor(Math.random()*places.length);
 var randomPlace = places[randomIndex];
@@ -108,23 +101,14 @@ randomIndex = Math.floor(Math.random()*places.length);
 randomPlace = places[randomIndex];
 console.log(randomPlace);
 var destCardFour = document.getElementById('suggestion4');
-// destCardFour.style.position = 'relative';
 var destNameFour = document.createElement('h3');
 destNameFour.setAttribute('class', 'nameStyle');
-// destNameFour.style.padding = '5px';
-// destNameFour.style.backgroundColor = '#294c49';
-// destNameFour.style.color = 'var(--light)';
-// destNameFour.style.textAlign = 'center';
-// destNameFour.style.fontSize = '300%';
-// destNameFour.style.position = 'absolute';
-// destNameFour.style.bottom = '0px';
 destNameFour.textContent = possDest[randomPlace].name;
 destCardFour.append(destNameFour);
 destCardFour.style.backgroundImage = possDest[randomPlace].image;
 
-// Query Selector all, event target the specific card input, store it
-// in Local Storage (preferably html dataset)
 
+// Upon clicking one of the cards, the name of the City the user has selected is sent to Local Storage and the user is directed to the Results Page.
 var recommDests = document.querySelectorAll(".suggestion");
 recommDests.forEach(suggestion => {
     suggestion.addEventListener('click', function(event) {

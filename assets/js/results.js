@@ -1,12 +1,13 @@
-$('#searchBtn').on('click',searchLocation)
+$('#searchBtn').on('click',function(){
+  searchLocation($("#resultSearch").val())
+})
 
  
-function searchLocation(){
+function searchLocation(e){
   let lat;
   let lon;
-
-  let searched = $("#resultSearch")
-  let geoSearchUrl =  `http://api.openweathermap.org/geo/1.0/direct?q=${searched.val()}&limit=1&appid=032ac5bb5a798a3a36948d8599fceafc`
+  console.log(e)
+  let geoSearchUrl =  `http://api.openweathermap.org/geo/1.0/direct?q=${e}&limit=1&appid=032ac5bb5a798a3a36948d8599fceafc`
 
   fetch(geoSearchUrl)
   .then(response => response.json())
@@ -24,12 +25,11 @@ function displayWeather(Lat,Lon){
   fetch(weatherUrl)
   .then(response => response.json())
   .then(data =>{
+    $('#weatherResults').html("")
    let weatherArr = [data.daily[0],data.daily[1],data.daily[2]]
-   console.log(weatherArr)
    weatherArr.forEach(e=>{
     let date = new Date(e.dt*1000)
     let dateText = `${date.getMonth()}/${date.getDate()}`
-    console.log(date)
     let iconcode = e.weather[0].icon
 
     let container = $("<div>")
@@ -38,71 +38,70 @@ function displayWeather(Lat,Lon){
     let descDiv = $("<div>")
     let icon = $("<img>")
     icon.attr("src",`http://openweathermap.org/img/wn/${iconcode}@2x.png`)
-    descDiv.append(icon,e.weather[0].description)
+    let description = $('<p>')
+    description.text(e.weather[0].description)
+    descDiv.append(description,icon)
 
     
 
     container.append(dateText,temps,descDiv)
     $('#weatherResults').append(container)
-    console.log(`max:${e.temp.max}\nmin:${e.temp.min}\n${e.weather[0].description}`)
    })
   })
 }
 
-// function searchActivities(filter,Lat,Lon){
+function searchActivities(filter,Lat,Lon){
 
-//   let activitiesUlr = `https://opentripmap-places-v1.p.rapidapi.com/en/places/radius?radius=16093.4&limit=50&lon=${Lon}&lat=${Lat}`
-//   const options = {
-//     method: 'GET',
-//     headers: {
-//       'X-RapidAPI-Key': '50bbf92f8cmsh3f683fecdd8114dp171169jsn8652d923bcec',
-//       'X-RapidAPI-Host': 'opentripmap-places-v1.p.rapidapi.com'
-//     }
-//   };
+  let activitiesUlr = `https://opentripmap-places-v1.p.rapidapi.com/en/places/radius?radius=16093.4&limit=50&lon=${Lon}&lat=${Lat}`
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '50bbf92f8cmsh3f683fecdd8114dp171169jsn8652d923bcec',
+      'X-RapidAPI-Host': 'opentripmap-places-v1.p.rapidapi.com'
+    }
+  };
 
-//   fetch(activitiesUlr,options)
-//   .then(response => response.json())
-//   .then(data =>{
-//     console.log(data)
-//     $("#resultsContainer").html("")
-//     data.features.forEach(e=>{
-//       let xid  = e.properties.xid
-//       const options1 = {
-//         method: 'GET',
-//         headers: {
-//           'X-RapidAPI-Key': '50bbf92f8cmsh3f683fecdd8114dp171169jsn8652d923bcec',
-//           'X-RapidAPI-Host': 'opentripmap-places-v1.p.rapidapi.com'
-//         }
-//       };
-//       var index = 0;
-//       fetch('https://opentripmap-places-v1.p.rapidapi.com/en/places/xid/'+xid, options1)
-//         .then(response => response.json())
-//         .then(dataResult => {
-//             if(dataResult.sources.attributes.length > 1 && index <5){
-//               let container = $("<article>")
-//               container.addClass("tile is-child notification borderGray backgroundKeppel")
-//               let title = $("<p>")
-//               title.addClass("title")
-//               title.text(dataResult.name)
+  fetch(activitiesUlr,options)
+  .then(response => response.json())
+  .then(data =>{
+    $("#resultsContainer").html("")
+    data.features.forEach(e=>{
+      let xid  = e.properties.xid
+      const options1 = {
+        method: 'GET',
+        headers: {
+          'X-RapidAPI-Key': '50bbf92f8cmsh3f683fecdd8114dp171169jsn8652d923bcec',
+          'X-RapidAPI-Host': 'opentripmap-places-v1.p.rapidapi.com'
+        }
+      };
+      fetch('https://opentripmap-places-v1.p.rapidapi.com/en/places/xid/'+xid, options1)
+        .then(response => response.json())
+        .then(dataResult => {
+          let resultAmount = document.getElementById('resultsContainer').querySelectorAll('article').length
+            if(dataResult.sources.attributes.length > 1 && resultAmount <5){
+              let container = $("<article>")
+              container.addClass("tile is-child notification borderGray backgroundKeppel")
+              let title = $("<p>")
+              title.addClass("title")
+              title.text(dataResult.name)
               
-//               let description =  $("<p>")
-//               description.addClass("subtitle")
-//               description.text(dataResult.wikipedia_extracts.text)
+              let description =  $("<p>")
+              description.addClass("subtitle")
+              description.text(dataResult.wikipedia_extracts.text)
 
-//               let linktag = $("<p>")
-//               linktag.html(`<a herf=${dataResult.otm}>read more here</a>`)
-//               // container.innerhtml = `<p class="title">${data.name}</p><p class="subtitle">${data.wikipedia_extracts.html}</p><p><a herf=${data.otm}>read more here</a></p>`
-//               container.append(title,description,linktag)
-//               $("#resultsContainer").append(container)
-//               // console.log(index)
-//               index = 5;
-//             }
+              let linktag = $("<p>")
+              linktag.html(`<a target="_blank" href="${dataResult.otm}">Show more at OpenTripMap</a>`)
+              // container.innerhtml = `<p class="title">${data.name}</p><p class="subtitle">${data.wikipedia_extracts.html}</p><p><a herf=${data.otm}>read more here</a></p>`
+              container.append(title,description,linktag)
+              $("#resultsContainer").append(container)
+              // console.log(index)
+              
+            }
           
-//         })
-//         .then("console")
-//     })
-//   })
-// }
+        })
+    })
+  })
+}
 $("#convert-Btn").on('click',convertCurrency)
 function convertCurrency(){
   var myHeaders = new Headers();
@@ -126,3 +125,6 @@ var requestOptions = {
 
 }
 
+let storedSearch = localStorage.getItem("localSearch")
+console.log("ex", storedSearch)
+searchLocation(storedSearch)
