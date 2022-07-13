@@ -72,6 +72,10 @@ body {
     width: 100px;
 }
 
+.maxHeight {
+    max-height: 100%;
+}
+
 /* Footer Styles */
 .footerBorder {
     border-top: solid 8px var(--gray);

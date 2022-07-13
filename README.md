@@ -34,6 +34,8 @@ The mobile page wireframe was developed further to include brand colors and a cl
 # Overview
 
 ![Search Page](./assets/images/SearchScreenshot.jpg)
+![Results Page](./assets/images/SearchForACity.png)
+![Entertainment Populates](./assets/images/EntertainmentPopulate.png)
 
 <br>
 
