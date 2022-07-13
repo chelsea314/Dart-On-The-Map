@@ -72,6 +72,10 @@ body {
     width: 100px;
 }
 
+.maxHeight {
+    max-height: 600px;
+}
+
 /* Footer Styles */
 .footerBorder {
     border-top: solid 8px var(--gray);
@@ -85,7 +89,7 @@ body {
     display: flex;
   }
   
-  .searchTerm {
+.searchTerm {
     width: 100%;
     border:  2px solid #00B4CC;
     border-right: none;
@@ -94,13 +98,13 @@ body {
     border-radius: 5px 0 0 5px;
     outline: none;
     color: #9DBFAF;
-  }
+}
   
-  .searchTerm:focus{
+.searchTerm:focus{
     color: #00B4CC;
-  }
+}
   
-  .searchButton {
+.searchButton {
     width: 50px;
     height: 36px;
     border: 1px solid #00B4CC;
@@ -110,10 +114,10 @@ body {
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-size: 20px;
-  }
+}
   
-  /*Resize the wrap to see the search bar change!*/
-  .wrap{
+/*Resize the wrap to see the search bar change!*/
+.wrap{
     width: 30%;
     position: absolute;
     top: 30%;
@@ -121,25 +125,15 @@ body {
     transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
-  }
-/*/
-  .dropdown {
-    position: absolute;
-    top: 35%;
-    left: 35%;
-    
-}
-/*controls the 3 boxes for destinations*/
-
-
-
-.suggestion {
-    height: 400px;
-    width: 500px;
-    display: block;
-    margin: auto;
 }
 
+/*controls the 4 boxes for destinations*/
+
+
+
+.suggestion :hover {
+    opacity: 70%;
+}
 
 .nameStyle {
     padding: 5px;
@@ -151,39 +145,53 @@ body {
     bottom: 0px;
 }
 
+.suggestion0 {
+    margin-top: 5%;
+    margin-bottom: 16%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+            
+}
+
 #suggestion1 {
-   background-size: 100% 100%;
-   height: 500px;
-   position: relative;
- }
+    background-size: 100% 100%;
+    height: 500px;   
+    width: 400px;
+    position: relative;
+}
 
  #suggestion2 {
     background-size: 100% 100%;
     height: 500px;
+    width: 400px;  
     position: relative;
  }
 
  #suggestion3 {
     background-size: 100% 100%;
-    height: 500px;
+    height: 500px;  
+    width: 400px;
     position: relative;
  }
 
  #suggestion4 {
     background-size: 100% 100%;
-    height: 500px;
+    height: 500px; 
+    width: 400px; 
     position: relative;
  }
 
-
-
 .footerSearch {
     background-color: #294c49;
-    height: 100px;
+    height: 50px;
     width: 100%;
     bottom: 0%;
-    margin: auto;
+    padding: 5px;
     position: fixed;        
-}
-
-
+}  
+@media screen and (max-width: 576px) {
+    .wrap {
+      flex-wrap: wrap;
+    }
+  }
