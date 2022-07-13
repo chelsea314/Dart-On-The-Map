@@ -73,7 +73,7 @@ body {
 }
 
 .maxHeight {
-    max-height: 600px;
+    max-height: 100%;
 }
 
 /* Footer Styles */
@@ -145,6 +145,16 @@ body {
     bottom: 0px;
 }
 
+
+.footerSearch {
+    background-color: #294c49;
+    height: 100px;
+    width: 100%;
+    bottom: 0%;
+    margin: auto;
+    position: fixed;        
+}  
+
 .suggestion0 {
     margin-top: 5%;
     margin-bottom: 16%;
@@ -153,6 +163,7 @@ body {
     justify-content: space-evenly;
             
 }
+
 
 #suggestion1 {
     background-size: 100% 100%;
@@ -182,16 +193,17 @@ body {
     position: relative;
  }
 
-.footerSearch {
-    background-color: #294c49;
-    height: 50px;
-    width: 100%;
-    bottom: 0%;
-    padding: 5px;
-    position: fixed;        
-}  
+    
+@media screen and (max-width: 768px) {
+    .suggestion{
+        
+       float:left;
+      }
+} 
+ 
 @media screen and (max-width: 576px) {
     .wrap {
       flex-wrap: wrap;
     }
   }
+
