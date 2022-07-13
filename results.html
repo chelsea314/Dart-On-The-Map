@@ -62,15 +62,9 @@
       <div class="tile is-ancestor ml-3 mr-3">
         <div class="tile is-8">
 
-
+          <!-- Activities Tiles -->
           <div  id="resultsContainer" class="tile is-vertical is-parent">
-            <article class="tile is-child notification borderGray backgroundKeppel">
-              <!-- <p class="title">Activity</p>
-              <p class="subtitle">Visit me!</p>
-              <div class="content">
-              </div> -->
-            </article>
-
+            <article class="tile is-child notification borderGray backgroundKeppel"></article>
           </div>
         </div>
 
@@ -90,27 +84,24 @@
                   <option class="textDark" value="AUD">AUD</option>
                 </select>
 
-            <!-- Currency Amount Input -->
+                 <!-- Currency Amount Input -->
                 <input class="has-text-centered mt-1 input textDark borderGray is-size-5" value="1" type="number" id="amount" placeholder="1">
                           
-              <!-- Currency Dropdown Menu -->
-                  <select name="to" class="has-text-centered mt-1 currency textDark borderGray is-size-5" id="to">
-                    <option class="textDark" value="USD">USD</option>
-                    <option class="textDark" value="EUR">Euro</option>
-                    <option class="textDark" value="MXN">MX Peso</option>
-                    <option class="textDark" value="AUD">AUD</option>
-                  </select>
-              <br>
-             <!--Convert Button  -->
+                <!-- Currency Dropdown Menu -->
+                <select name="to" class="has-text-centered mt-1 currency textDark borderGray is-size-5" id="to">
+                  <option class="textDark" value="USD">USD</option>
+                  <option class="textDark" value="EUR">Euro</option>
+                  <option class="textDark" value="MXN">MX Peso</option>
+                  <option class="textDark" value="AUD">AUD</option>
+                </select>
+                <br>
+
+                <!--Convert Button  -->
                 <a class="button textLight borderLightGreen backgroundDark mt-1 is-size-5 " id="convert-Btn">
-                  <span>Convert</span>
-                </a>  
-              </p>
+                <span>Convert</span></a>
 
-              <!-- Conversion Output -->
-              <div id="converted" class="backgroundLight textDark borderDark has-text-centered box mt-4 is-size-4">
-              </div>
-
+                <!-- Conversion Output -->
+                <div id="converted" class="backgroundLight textDark borderDark has-text-centered box mt-4 is-size-4"></div>
             </article>
           </div> 
 
@@ -120,7 +111,6 @@
             <p class="title">Weather</p>
             <p class="subtitle">Plan your activities based on the weather</p>
             <div id="weatherResults"></div>
-            
           </article>
         </div> 
       </div>
@@ -130,11 +120,7 @@
     <!-- Footer -->
     <footer class="footer columns is-justify-content-center is-align-items-center backgroundDark footerBorder">
       <div class="column is-5 is-justify-content-center m-auto">
-          
-        <p class=" title textLight has-text-centered">Dart <span class="iconify" data-icon="mdi:bullseye-arrow"></span>n the Map
-
-        </p>
-        
+      <p class=" title textLight has-text-centered">Dart <span class="iconify" data-icon="mdi:bullseye-arrow"></span>n the Map</p>
       </div>
     </footer>
 
