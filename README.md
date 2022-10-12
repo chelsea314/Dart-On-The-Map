@@ -1,4 +1,12 @@
-# Dart on the Map
+# **Dart on the Map**
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+## Deployed Link:
+Click [here.](https://jadentr44.github.io/Dart-On-The-Map/) 
+
+Please note, the open weather API has temporaily been removed for security reasons. 
+
+## Overview:
 Welcome to Dart on the Map! 
 
 This application is inspired by the desire to throw a dart on a map and travel to the place it strikes. We support spontaneity and hope to bring this idea to fruition through our site. Plan your upcoming travel, whether destination known or unknown, with Dart on the Map. Let your spontaneous side shine and let the dart decide. 
@@ -7,9 +15,29 @@ It may seem scary, but we are firm believers that, 'taking the road less travele
 
 Where will you go next?
 
-<br>
+## Table of Contents
+ - [How it Works](#how-it-works)
+ - [Planning Process](#planning-process)
+ - [Future Development](#future-development)
+ - [Resources](#resources)
+ - [Contributing](#contributing)
+ - [Questions](#questions)
 
-# Wireframe
+
+## How it Works:
+A brief overview to demonstrate how to use Dart on the Map.
+
+![Search Page](./assets/images/SearchScreenshot.jpg)
+![Results Page](./assets/images/SearchForACity.png)
+![Entertainment Populates](./assets/images/EntertainmentPopulate.png)
+![Exchange Rate From](./assets/images/ExchangeRate.jpg)
+![Exchange Rate Amount](./assets/images/ExchangeAmount.png)
+![Exchange Rate To](./assets/images/Exchange%20Rate%20To.png)
+![Exchange Convert Calculate](./assets/images/exchangeconvertcalculate.png)
+![Weather](./assets/images/weather.png)
+![Button Toggle](./assets/images/buttontoggle.png)
+
+## Planning Process:
 As a team, a first draft of the search page was developed:
 ![Wireframe - Search Page - 1st Draft](./assets/images/Superior%20Group%20Wireframe%20-%20Search%20Page%20-%201st%20Draft.png)
 
@@ -28,95 +56,32 @@ First draft of mobile view:
 The mobile page wireframe was developed further to include brand colors and a clearer vision for all developers to utilize:
 ![Wireframe - Mobile - Final](./assets/images/Superior%20Group%20Wireframe%20Mobile.png)
 
+## Future Development: 
+- All buttons in top header functional
+- Error message for invalid search
+- More currencies options to the exchange section.
+- Currency exchange automatically populate based on searched location
+- Interactive dart throwing with world map
+- Most popular searches featured first
+- Local locations for in-person currency exchange
 
-<br>
+## Resources:
+[Bulma](https://bulma.io/documentation/) | [jQuery](https://api.jquery.com/) | [Iconify](https://iconify.design/) | [Font Awesome](https://fontawesome.com/icons) | [Open Weather API](https://openweathermap.org/api) | [Open Trip Map API](https://opentripmap.io/product) | [Exchange Rates Data API](https://apilayer.com/marketplace/exchangerates_data-api)
 
-# Overview
-A brief overview to demonstrate how to use Dart on the Map.
-<br>
+## Contributing:
+<table>
 
-![Search Page](./assets/images/SearchScreenshot.jpg)
+<td align="center"><a href="https://github.com/chelsea314"><img src="https://avatars.githubusercontent.com/u/1285062?v=4" width="100px;" alt=""/><br /><sub><b>Chelsea Sexton</b></sub></a></td>
 
-<br>
+<td align="center"><a href="https://github.com/Jadentr44"><img src="https://avatars.githubusercontent.com/u/107438209?v=4" width="100px;" alt=""/><br /><sub><b>Jaden Rodriguez</b></sub></a></td>
 
-![Results Page](./assets/images/SearchForACity.png)
+<td align="center"><a href="https://github.com/amezabla"><img src="https://avatars.githubusercontent.com/u/103525784?v=4" width="100px;" alt=""/><br /><sub><b>Angel Meza</b></sub></a></td>
 
-<br>
+<td align="center"><a href="https://github.com/ZSerrano"><img src="https://avatars.githubusercontent.com/u/65681875?v=4" width="100px;" alt=""/><br /><sub><b>Zach Serrano</b></sub></a></td>
+</tr>
+</table>
 
-![Entertainment Populates](./assets/images/EntertainmentPopulate.png)
+## Questions:
+Feel free to contact Chelsea with suggestions for improvements, questions or concerns.
 
-<br>
-
-![Exchange Rate From](./assets/images/ExchangeRate.jpg)
-
-<br>
-
-![Exchange Rate Amount](./assets/images/ExchangeAmount.png)
-
-<br>
-
-![Exchange Rate To](./assets/images/Exchange%20Rate%20To.png)
-
-<br>
-
-![Exchange Convert Calculate](./assets/images/exchangeconvertcalculate.png)
-
-<br>
-
-![Weather](./assets/images/weather.png)
-
-<br>
-
-![Button Toggle](./assets/images/buttontoggle.png)
-
-
-<br>
-
-# Deployed Website Link
-[Dart on the Map](https://jadentr44.github.io/Dart-On-The-Map/) 
-
-<br>
-
-# Collaborators 
-* [Angel Meza](https://github.com/amezabla)
-* [Jaden Rodriguez](https://github.com/Jadentr44)
-* [Zach Serrano](https://github.com/ZSerrano)
-* [Chelsea Sexton](https://github.com/chelsea314)
-
-<br>
-
-# Resources
-* [Bulma](https://bulma.io/documentation/)
-* [jQuery](https://api.jquery.com/)
-* [Iconify](https://iconify.design/)
-* [Font Awesome](https://fontawesome.com/icons)
-* [Open Weather API](https://openweathermap.org/api)
-* [Open Trip Map API](https://opentripmap.io/product)
-* [Exchange Rates Data API](https://apilayer.com/marketplace/exchangerates_data-api)
-
-
-
-<br>
-
-# License
-MIT License
-
-Copyright (c) 2022 Chelsea Sexton
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+[Email: Chelsea Sexton](mailto:chelseansexton@gmail.com)
